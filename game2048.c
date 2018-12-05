@@ -205,23 +205,25 @@ int main()
 
 	while(1)
 	{
-
+		// 创建一个数
 		creat_num();
+		// 显示界面
 		show_view();
-
+		// 判断游戏是否结束
 		if(is_over())
 		{
 			printf("游戏结束!\n");
 			return 0;
 		}
-
+		// 假定此次不能移动或合并
 		IS_MOVE_MERGE = false;
+		// 获取方向键，并处理
 		switch(getch())
 		{
-			case 183: up(); 	break;//up
-			case 184: down(); 	break;//down
-			case 185: right(); 	break;//right
-			case 186: left(); 	break;//left
+			case 183: up(); break;//up
+			case 184: down(); break;//down
+			case 185: right(); break;//right
+			case 186: left(); break;//left
 		}
 	}
 }
